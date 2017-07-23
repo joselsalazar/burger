@@ -1,0 +1,7 @@
+#Folder#
+ignore
+node_modules
+
+#OS Files#
+._*
+

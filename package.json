@@ -1,0 +1,23 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Crappy Digital Burger App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joselsalazar/burger.git"
+  },
+  "author": "Jose Salad Bar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joselsalazar/burger/issues"
+  },
+  "homepage": "https://github.com/joselsalazar/burger#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
