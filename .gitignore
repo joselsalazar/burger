@@ -2,6 +2,10 @@
 ignore
 node_modules
 
+#Files#
+package-lock.json
+to-do.txt
+
 #OS Files#
 ._*
 

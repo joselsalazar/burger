@@ -1,0 +1,40 @@
+<h1>Eat Da Burger!</h1>
+
+<h2>Eat Any of the Burgers Below!</h2>
+
+<ul class="display-burgers">
+  {{#each burgers}}
+    <li>
+      {{this.name}}
+
+      <form action="/{{this.id}}?_method=MERGE" method="POST">
+        <input type="hidden" name="id" value="{{this.id}}">
+        <button type="submit">EAT!</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
+
+<ul class="display-burgers">
+  {{#each eatenBurgers}}
+    <li>
+      {{this.name}}
+
+      <form action="/{{this.id}}?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value="{{this.id}}">
+        <button type="submit" disabled>EATEN!</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
+
+<h2>Add a Burger!</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <button type="submit">Add Burger!</button>
+</form>

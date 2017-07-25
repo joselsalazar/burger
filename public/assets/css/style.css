@@ -1,0 +1,29 @@
+ul {
+  padding-left: 0;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+  list-style: none;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.display-burgers {
+	width: 45%;
+	display: inline-block;
+}
