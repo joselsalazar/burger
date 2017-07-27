@@ -4,27 +4,32 @@
 
 <ul class="display-burgers">
   {{#each burgers}}
-    <li>
-      {{this.name}}
+    {{#unless this.eaten}}
+      <li>
+        {{this.name}}
 
-      <form action="/{{this.id}}?_method=MERGE" method="POST">
-        <input type="hidden" name="id" value="{{this.id}}">
-        <button type="submit">EAT!</button>
-      </form>
-    </li>
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="eat" value="true">
+          <button type="submit">EAT!</button>
+        </form>
+      </li>
+    {{/unless}}
   {{/each}}
 </ul>
 
-<ul class="display-burgers">
-  {{#each eatenBurgers}}
-    <li>
-      {{this.name}}
 
-      <form action="/{{this.id}}?_method=DELETE" method="POST">
-        <input type="hidden" name="id" value="{{this.id}}">
-        <button type="submit" disabled>EATEN!</button>
-      </form>
-    </li>
+<ul class="display-burgers">
+  {{#each burgers}}
+    {{#if this.eaten}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="eat" value="false">
+          <button type="submit" disabled>EATEN!</button>
+        </form>
+      </li>
+    {{/if}}
   {{/each}}
 </ul>
 
