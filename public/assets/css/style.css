@@ -1,3 +1,13 @@
+body {
+  background: url(../img/burger-min.jpg);
+  font-family: 'Anton', sans-serif;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
 ul {
   padding-left: 0;
 }
@@ -5,8 +15,11 @@ ul {
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
   list-style: none;
+}
+
+.headers {
+  text-align: center;
 }
 
 .label {
@@ -26,4 +39,7 @@ li {
 .display-burgers {
 	width: 45%;
 	display: inline-block;
+  background: rgba(255,255,255,0.8);
+  border-radius: 45px;
+  padding: 10px;
 }
