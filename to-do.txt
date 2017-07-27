@@ -1,0 +1,2 @@
+1. Make both databases show on the index page.
+2. Run the Delete function after the merge function completes.
